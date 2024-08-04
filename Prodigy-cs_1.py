@@ -1,31 +1,47 @@
-def encrypt(text, shift):
-    encrypted_text = ""
-    for char in text:
-        if char.isalpha():
-            shift_amount = 65 if char.isupper() else 97
-            encrypted_text += chr((ord(char) + shift - shift_amount) % 26 + shift_amount)
-        else:
-            encrypted_text += char
-    return encrypted_text
+def caesar_cipher(text, shift, mode='encrypt'):
+    result = ""
 
-def decrypt(text, shift):
-    return encrypt(text, -shift)
+    # Adjust shift for decryption
+    if mode == 'decrypt':
+        shift = -shift
+
+    # Loop through each character in the text
+    for char in text:
+        # Encrypt/Decrypt uppercase characters
+        if char.isupper():
+            result += chr((ord(char) + shift - 65) % 26 + 65)
+        # Encrypt/Decrypt lowercase characters
+        elif char.islower():
+            result += chr((ord(char) + shift - 97) % 26 + 97)
+        else:
+            # Non-alphabetic characters are added unchanged
+            result += char
+
+    return result
 
 def main():
-    choice = input("Do you want to (e)ncrypt or (d)ecrypt? ").lower()
-    if choice not in ['e', 'd']:
-        print("Invalid choice!")
-        return
+    print("Welcome to the Caesar Cipher program!")
+    while True:
+        choice = input("Would you like to (e)ncrypt or (d)ecrypt a message? (e/d): ").lower()
+        if choice not in ['e', 'd']:
+            print("Invalid choice! Please enter 'e' for encrypt or 'd' for decrypt.")
+            continue
 
-    message = input("Enter your message: ")
-    shift = int(input("Enter the shift value: "))
+        message = input("Enter your message: ")
+        shift = int(input("Enter the shift value: "))
 
-    if choice == 'e':
-        result = encrypt(message, shift)
-    else:
-        result = decrypt(message, shift)
+        if choice == 'e':
+            mode = 'encrypt'
+        else:
+            mode = 'decrypt'
 
-    print(f"Result: {result}")
+        result = caesar_cipher(message, shift, mode)
+        print(f"Result: {result}")
+
+        another = input("Would you like to encrypt/decrypt another message? (y/n): ").lower()
+        if another != 'y':
+            print("Goodbye!")
+            break
 
 if __name__ == "__main__":
     main()
