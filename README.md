@@ -1,4 +1,4 @@
-# Caesar Cipher Program
+# Crypt Text 
 
 This is a simple Python program that demonstrates the Caesar Cipher encryption and decryption algorithm. The Caesar Cipher is a type of substitution cipher in which each letter in the plaintext is shifted a certain number of places down or up the alphabet.
 
