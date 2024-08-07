@@ -37,11 +37,20 @@ This is a simple Python program that demonstrates the Caesar Cipher encryption a
 
 ## Example
 
+```
 Welcome to the Caesar Cipher program!
+
 Would you like to (e)ncrypt or (d)ecrypt a message? (e/d): e
+
 Enter your message: Hello, World!
+
 Enter the shift value: 3
+
 Result: Khoor, Zruog!
+
 Would you like to encrypt/decrypt another message? (y/n): n
+
 Goodbye!
+
+```
 
