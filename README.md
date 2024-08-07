@@ -11,12 +11,29 @@ This is a simple Python program that demonstrates the Caesar Cipher encryption a
 
 ## How to Use
 
-1. Run the program.
-2. Choose whether you want to encrypt or decrypt a message by typing 'e' or 'd'.
-3. Enter the message you want to encrypt or decrypt.
-4. Enter the shift value (an integer).
-5. The program will display the encrypted or decrypted result.
-6. You can choose to perform another encryption or decryption or exit the program.
+1. Clone the repository:
+   ```
+   https://github.com/aiwin2002/PRODIGY_CS_1.git
+   ```
+
+2. Navigate into the project directory:
+   ```
+   cd PRODIGY_CS_1
+   ```
+
+3. Run the program:
+   ```
+   python3 PRODIGY_CS_1.py
+   ```
+
+##Follow the prompts to encrypt or decrypt a message.
+
+
+1. Choose whether you want to encrypt or decrypt a message by typing 'e' or 'd'.
+2. Enter the message you want to encrypt or decrypt.
+3. Enter the shift value (an integer).
+4. The program will display the encrypted or decrypted result.
+5. You can choose to perform another encryption or decryption or exit the program.
 
 ## Example
 
